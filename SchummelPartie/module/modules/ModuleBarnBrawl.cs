@@ -3,26 +3,31 @@ using System.Linq;
 using System.Reflection;
 using MelonLoader;
 using SchummelPartie.render;
+using SchummelPartie.setting.settings;
 using UnityEngine;
-using UrGUI.UWindow;
 
 namespace SchummelPartie.module.modules;
 
 public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
 {
-    private bool _godMode = false;
-    private bool _infiniteShotgun = false;
-    private bool _burstShotgun = false;
-    private bool _noCameraShake = false;
-    private bool _esp = true;
+    public SettingSwitch GodMode;
+    public SettingSwitch InfiniteShotgun;
+    public SettingSwitch BurstShotgun;
+    public SettingSwitch NoCameraShake;
+    public SettingSwitch ESP;
 
     public ModuleBarnBrawl() : base("Barn Brawl", "God Mode, Infinite Shotgun (Press F), Burst Shotgun, ESP.")
     {
+        GodMode = new(Name, "God Mode", false);
+        InfiniteShotgun = new(Name, "Infinite Shotgun", false);
+        BurstShotgun = new(Name, "Burst Shotgun", false);
+        NoCameraShake = new(Name, "No Camera Shake", false);
+        ESP = new(Name, "Extra Sensory Perception", false);
     }
 
     public override void OnUpdate()
     {
-        if (Enabled && (_godMode || _infiniteShotgun || _burstShotgun))
+        if (Enabled && ((bool) GodMode.GetValue() || (bool) InfiniteShotgun.GetValue() || (bool) BurstShotgun.GetValue()))
         {
             if (GameManager.Minigame is BarnBrawlController barnBrawlController)
             {
@@ -32,20 +37,20 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
                     {
                         if (player.IsMe())
                         {
-                            if (_godMode)
+                            if ((bool) GodMode.GetValue())
                             {
                                 barnBrawlPlayer.ApplyDamage(barnBrawlPlayer, -10, Vector3.zero, 0, 0, 0);
                             }
 
                             if (!barnBrawlPlayer.HoldingShotgun)
                             {
-                                if (_infiniteShotgun || Input.GetKeyDown(KeyCode.F))
+                                if ((bool) InfiniteShotgun.GetValue() || Input.GetKeyDown(KeyCode.F))
                                 {
                                     barnBrawlPlayer.HoldingShotgun = true;
                                 }
                             }
 
-                            if (_burstShotgun)
+                            if ((bool) BurstShotgun.GetValue())
                             {
                                 barnBrawlPlayer.minProjectiles = 50;
                                 barnBrawlPlayer.maxProjectiles = 60;
@@ -56,7 +61,7 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
                                 barnBrawlPlayer.maxProjectiles = 10;
                             }
 
-                            if (_noCameraShake)
+                            if ((bool) NoCameraShake.GetValue())
                             {
                                 FieldInfo cameraShakeField = barnBrawlPlayer.GetType().GetField("cameraShake",
                                     BindingFlags.NonPublic | BindingFlags.Instance);
@@ -84,7 +89,7 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
     public override void OnGUI()
     {
         base.OnGUI();
-        if (Enabled && _esp)
+        if (Enabled && (bool) ESP.GetValue())
         {
             try
             {
@@ -118,25 +123,5 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
                 MelonLogger.Error(e.ToString());
             }
         }
-    }
-
-    public override void OnSettings(UWindow window)
-    {
-        base.OnSettings(window);
-        window.SameLine();
-        window.Label("God Mode");
-        window.Toggle("God Mode", godMode => { _godMode = godMode; }, _godMode);
-        window.SameLine();
-        window.Label("Infinite Shotgun");
-        window.Toggle("Infinite Shotgun", infiniteShotgun => { _infiniteShotgun = infiniteShotgun; }, _infiniteShotgun);
-        window.SameLine();
-        window.Label("Burst Shotgun");
-        window.Toggle("Burst Shotgun", burstShotgun => { _burstShotgun = burstShotgun; }, _burstShotgun);
-        window.SameLine();
-        window.Label("No Camera Shake");
-        window.Toggle("No Camera Shake", noScreenShake => { _noCameraShake = noScreenShake; }, _noCameraShake);
-        window.SameLine();
-        window.Label("Extra Sensory Perception");
-        window.Toggle("Extra Sensory Perception", esp => { _esp = esp; }, _esp);
     }
 }

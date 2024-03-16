@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using SchummelPartie.setting.settings;
 using UrGUI.UWindow;
 
 namespace SchummelPartie.module.modules;
@@ -6,10 +7,11 @@ namespace SchummelPartie.module.modules;
 public class ModuleTanks : ModuleMinigame<TanksController>
 {
 
-    private bool _rapidFire = false;
+    public SettingSwitch RapidFire;
 
-    public ModuleTanks() : base("Tanks", "Rapid Fire")
+    public ModuleTanks() : base("Tanks", "Rapid Fire.")
     {
+        RapidFire = new(Name, "Rapid Fire", false);
     }
 
     public override void OnUpdate()
@@ -24,7 +26,7 @@ public class ModuleTanks : ModuleMinigame<TanksController>
                     {
                         if (player.IsMe())
                         {
-                            if (_rapidFire)
+                            if ((bool) RapidFire.GetValue())
                             {
                                 typeof(TanksPlayer).GetField("m_fireRate", BindingFlags.NonPublic | BindingFlags.Instance)?.SetValue(tanksPlayer, 0.001f);
                             }
@@ -37,13 +39,5 @@ public class ModuleTanks : ModuleMinigame<TanksController>
                 }
             }
         }
-    }
-
-    public override void OnSettings(UWindow window)
-    {
-        base.OnSettings(window);
-        window.SameLine();
-        window.Label("Rapid Fire");
-        window.Toggle("Rapid Fire", value => { _rapidFire = value; }, _rapidFire);
     }
 }
