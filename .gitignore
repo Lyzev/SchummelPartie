@@ -385,8 +385,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 .idea/
+!.idea/icon.png
 *.sln.iml
 {"mode":"full","isActive":false}
 
 # custom
-UrGUILegacy/
+*.DotSettings
