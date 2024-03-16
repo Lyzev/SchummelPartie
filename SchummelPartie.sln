@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchummelPartie", "SchummelPartie\SchummelPartie.csproj", "{5D0B5998-5DA9-40C5-8EC3-C600D9B7C556}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D0B5998-5DA9-40C5-8EC3-C600D9B7C556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0B5998-5DA9-40C5-8EC3-C600D9B7C556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0B5998-5DA9-40C5-8EC3-C600D9B7C556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0B5998-5DA9-40C5-8EC3-C600D9B7C556}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
