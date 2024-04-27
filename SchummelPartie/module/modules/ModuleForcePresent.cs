@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
 using MelonLoader;
 using SchummelPartie.setting.settings;
@@ -12,7 +13,7 @@ public class ModuleForcePresent : Module
 
     public SettingDropDown ActionID;
 
-    public ModuleForcePresent() : base("Force Present", "Forces the present to be the one you want.")
+    public ModuleForcePresent() : base("Force Present", "Forces the present to be the one you want. (NOT TESTED)")
     {
         Instance = this;
         ActionID = new(Name, "Action ID", new Dictionary<int, string>
@@ -30,13 +31,16 @@ public static class PresentItemPatch
     [HarmonyPrefix]
     internal static bool Prefix(PresentItem __instance, ref byte actionID)
     {
-        if (ModuleForcePresent.Instance.Enabled)
+        GamePlayer player = ((GamePlayer) typeof(PresentItem).GetField("player", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance));
+        if (player.BoardObject.IsOwner && !player.IsAI)
         {
-            MelonLogger.Msg(
-                $"[{ModuleForcePresent.Instance.Name}] [Client] Force Present ID: {ModuleForcePresent.Instance.ActionID}");
-            actionID = (byte) (int) ModuleForcePresent.Instance.ActionID.GetValue();
+            if (ModuleForcePresent.Instance.Enabled)
+            {
+                MelonLogger.Msg(
+                    $"[{ModuleForcePresent.Instance.Name}] [Client] Force Present ID: {ModuleForcePresent.Instance.ActionID.GetValue()}");
+                actionID = (byte) (int) ModuleForcePresent.Instance.ActionID.GetValue();
+            }
         }
-
         return true;
     }
 }
@@ -45,15 +49,17 @@ public static class PresentItemPatch
 public static class NetBehaviourPatch
 {
     [HarmonyPrefix]
-    internal static bool Prefix(string method, NetRPCDelivery delivery, params object[] parameters)
+    internal static bool Prefix(NetBehaviour __instance, string method, NetRPCDelivery delivery, params object[] parameters)
     {
-        if (ModuleForcePresent.Instance.Enabled && method == "RPCOpenPresent")
+        if (__instance.IsOwner)
         {
-            MelonLogger.Msg(
-                $"[{ModuleForcePresent.Instance.Name}] [Server] Force Present ID: {ModuleForcePresent.Instance.ActionID}");
-            parameters[0] = ModuleForcePresent.Instance.ActionID;
+            if (ModuleForcePresent.Instance.Enabled && method == "RPCOpenPresent")
+            {
+                MelonLogger.Msg(
+                    $"[{ModuleForcePresent.Instance.Name}] [Server] Force Present ID: {ModuleForcePresent.Instance.ActionID.GetValue()}");
+                parameters[0] = (byte) (int) ModuleForcePresent.Instance.ActionID.GetValue();
+            }
         }
-
         return true;
     }
 }

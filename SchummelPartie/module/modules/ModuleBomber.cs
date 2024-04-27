@@ -10,7 +10,7 @@ public class ModuleBomber : ModuleMinigame<BomberController>
     {
         if (Enabled)
         {
-            if (GameManager.Minigame is BattyBatterController bomberController)
+            if (GameManager.Minigame is BomberController bomberController)
             {
                 foreach (var player in bomberController.players)
                 {

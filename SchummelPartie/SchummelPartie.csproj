@@ -353,6 +353,10 @@
         <Compile Include="module\modules\ModuleBarnBrawl.cs" />
         <Compile Include="module\modules\ModuleBattyBatter.cs" />
         <Compile Include="module\modules\ModuleBomber.cs" />
+        <Compile Include="module\modules\ModuleCrownCapture.cs" />
+        <Compile Include="module\modules\ModuleDaringDogfight.cs" />
+        <Compile Include="module\modules\ModuleElementalMages.cs" />
+        <Compile Include="module\modules\ModuleExplosiveExchange.cs" />
         <Compile Include="module\modules\ModuleFinder.cs" />
         <Compile Include="module\modules\ModuleGUI.cs"/>
         <Compile Include="module\modules\ModuleDebug.cs"/>

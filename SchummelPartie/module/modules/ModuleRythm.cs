@@ -56,7 +56,6 @@ public static class RhythmPlayerPatch
                     {
                         MelonLogger.Error(e.ToString());
                     }
-
                 }
             }
         }

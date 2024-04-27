@@ -25,7 +25,7 @@ public static class SwiftShootersPlayerPatch
     [HarmonyPrefix]
     internal static bool Prefix(SwiftShootersPlayer __instance)
     {
-        if (ModuleSpookySpikes.Instance.Enabled)
+        if (ModuleSwiftShooters.Instance.Enabled)
         {
             if (__instance.IsMe())
             {
@@ -53,7 +53,7 @@ public static class SwiftShootersPlayerPatch
     [HarmonyPrefix]
     internal static bool Postfix(SwiftShootersPlayer __instance)
     {
-        if (ModuleSpookySpikes.Instance.Enabled)
+        if (ModuleSwiftShooters.Instance.Enabled)
         {
             if (__instance.IsMe())
             {
