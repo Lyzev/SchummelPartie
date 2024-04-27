@@ -32,6 +32,7 @@ by the use of this software. This project is intended for educational purposes o
 <summary>Debug</summary>
 
 Toggle the Debug mode.
+<img src="debug.png" alt="Debug Mode Features">
 </details>
 
 <details>
