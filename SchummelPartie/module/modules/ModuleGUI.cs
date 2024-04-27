@@ -9,7 +9,7 @@ public class ModuleGUI : Module
 
     private readonly UWindow _window;
 
-    public ModuleGUI() : base("Graphical User Interface", "Toggle the GUI with INSERT.")
+    public ModuleGUI() : base("Graphical User Interface", "Toggle the GUI with Insert or RightShift.")
     {
         Instance = this;
         _window = UWindow.Begin("Schummel Partie", startX: 0, startY: 0, startWidth: 350, startHeight: 400, dynamicHeight: true);

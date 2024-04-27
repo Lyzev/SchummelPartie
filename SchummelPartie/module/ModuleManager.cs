@@ -32,9 +32,9 @@ public static class ModuleManager
         Modules.Add(new ModuleSelfishStride());
         Modules.Add(new ModuleMemoryMenu());
         Modules.Add(new ModuleTanks());
-        Modules.Add(new ModuleGUI());
         Modules.Add(new ModuleSidestepSlope());
         Modules.Add(new ModuleSpeedySpotlights());
+        Modules.Add(new ModuleGUI());
         // Code to generate markdown for the modules
         // StringBuilder markdown = new StringBuilder();
         // foreach (var module in Modules)

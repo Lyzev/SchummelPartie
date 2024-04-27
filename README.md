@@ -134,13 +134,25 @@ Show the target food.
 <details>
 <summary>Tanks</summary>
 
-Rapid Fire
+Rapid Fire.
+</details>
+
+<details>
+<summary>Sidestep Slope</summary>
+
+God Mode.
+</details>
+
+<details>
+<summary>Speedy Spotlights</summary>
+
+Show the position of the other players.
 </details>
 
 <details>
 <summary>Graphical User Interface</summary>
 
-Toggle the GUI with INSERT.
+Toggle the GUI with Insert or RightShift.
 </details>
 
 ## Getting Started

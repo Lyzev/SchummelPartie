@@ -40,8 +40,8 @@ namespace SchummelPartie.setting
                 if (s != null)
                 {
                     s.SetValue(Convert.ChangeType(setting.Value, s.GetValue().GetType()));
-                    MelonLogger.Msg($"Setting {setting.Container}.{setting.Name} = {s.GetValue()}");
-                } else MelonLogger.Warning($"Setting {setting.Container}.{setting.Name} not found");
+                    MelonLogger.Msg($"[Setting] {setting.Container}.{setting.Name} = {s.GetValue()}");
+                } else MelonLogger.Warning($"[Setting] {setting.Container}.{setting.Name} not found");
             }
         }
 
