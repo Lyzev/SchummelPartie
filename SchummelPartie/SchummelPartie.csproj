@@ -363,7 +363,9 @@
         <Compile Include="module\modules\ModulePackAndPile.cs" />
         <Compile Include="module\modules\ModulePresents.cs" />
         <Compile Include="module\modules\ModuleRythm.cs" />
+        <Compile Include="module\modules\ModuleSpeedySpotlights.cs" />
         <Compile Include="module\modules\ModuleSelfishStride.cs" />
+        <Compile Include="module\modules\ModuleSidestepSlope.cs" />
         <Compile Include="module\modules\ModuleSpookySpikes.cs" />
         <Compile Include="module\modules\ModuleSwiftShooters.cs" />
         <Compile Include="module\modules\ModuleTanks.cs" />

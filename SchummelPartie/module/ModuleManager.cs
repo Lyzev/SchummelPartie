@@ -33,6 +33,8 @@ public static class ModuleManager
         Modules.Add(new ModuleMemoryMenu());
         Modules.Add(new ModuleTanks());
         Modules.Add(new ModuleGUI());
+        Modules.Add(new ModuleSidestepSlope());
+        Modules.Add(new ModuleSpeedySpotlights());
         // Code to generate markdown for the modules
         // StringBuilder markdown = new StringBuilder();
         // foreach (var module in Modules)
