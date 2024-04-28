@@ -32,8 +32,10 @@ public class Loader : MelonMod
                 MelonLogger.Msg($"[Loader] Initialized {m.Name}.");
             });
             MelonLogger.Msg("[Loader] Loaded Settings.");
-            MelonLogger.Msg("[Loader] Finished Initializing SchummelPartie in " + (DateTime.Now.Ticks - start) / TimeSpan.TicksPerMillisecond + "ms.");
+            MelonLogger.Msg("[Loader] Finished Initializing SchummelPartie in " +
+                            (DateTime.Now.Ticks - start) / TimeSpan.TicksPerMillisecond + "ms.");
         }
+
         ModuleManager.OnUpdate();
     }
 

@@ -6,13 +6,14 @@ namespace SchummelPartie.setting.settings;
 
 public class SettingDropDown : Setting<int>
 {
-    public Dictionary<int, string> Options { get; }
-
-    public SettingDropDown(string container, string name, Dictionary<int, string> options, int value = default, Action<int> onChange = null) :
+    public SettingDropDown(string container, string name, Dictionary<int, string> options, int value = default,
+        Action<int> onChange = null) :
         base(container, name, value, onChange)
     {
         Options = options;
     }
+
+    public Dictionary<int, string> Options { get; }
 
     public override void OnSettings(UWindow window)
     {

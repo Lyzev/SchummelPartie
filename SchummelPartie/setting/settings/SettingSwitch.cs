@@ -5,7 +5,6 @@ namespace SchummelPartie.setting.settings;
 
 public class SettingSwitch : Setting<bool>
 {
-
     public UWindowControls.WToggle toggle;
 
     public SettingSwitch(string container, string name, bool value = default, Action<bool> onChange = null) :

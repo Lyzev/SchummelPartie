@@ -30,128 +30,137 @@ by the use of this software. This project is intended for educational purposes o
 
 <details>
 <summary>Debug</summary>
-
 Toggle the Debug mode.
 <img src="debug.png" alt="Debug Mode Features">
 </details>
 
 <details>
 <summary>Force Present</summary>
-
 Forces the present to be the one you want.
 </details>
 
 <details>
 <summary>Animal Arithmetic</summary>
-
 Show the answer to the animal arithmetic.
 </details>
 
 <details>
 <summary>Mystery Maze</summary>
-
 Shows the path to the exit.
 </details>
 
 <details>
 <summary>Mortar Mayhem</summary>
-
 Show the answer to the mortar mayhem.
 </details>
 
 <details>
 <summary>Batty Batter</summary>
-
 Automatically hit the ball.
 </details>
 
 <details>
 <summary>Spooky Spikes</summary>
-
 Automatically crouch or jump when needed.
 </details>
 
 <details>
 <summary>Rockin Rythm</summary>
-
 Automatically hit the notes.
 </details>
 
 <details>
 <summary>Pack And Pile</summary>
-
 Automatically place boxes.
 </details>
 
 <details>
 <summary>Treasure Hunt</summary>
-
 Shows the path to the treasure.
 </details>
 
 <details>
 <summary>Swift Shooters</summary>
-
 Automatically shoot the good targets.
 </details>
 
 <details>
 <summary>Bomber</summary>
-
 Bombs are infinite.
 </details>
 
 <details>
 <summary>Finder</summary>
-
 Show the position of the other players.
 </details>
 
 <details>
 <summary>Barn Brawl</summary>
-
 God Mode, Infinite Shotgun (Press F), Burst Shotgun, ESP.
 </details>
 
 <details>
 <summary>Presents</summary>
-
 Automatically collect the best presents.
 </details>
 
 <details>
 <summary>Selfish Stride</summary>
-
 Show the target bridge.
 </details>
 
 <details>
 <summary>Memory Menu</summary>
-
 Show the target food.
 </details>
 
 <details>
 <summary>Tanks</summary>
-
 Rapid Fire.
 </details>
 
 <details>
 <summary>Sidestep Slope</summary>
-
 God Mode.
 </details>
 
 <details>
 <summary>Speedy Spotlights</summary>
-
 Show the position of the other players.
 </details>
 
 <details>
-<summary>Graphical User Interface</summary>
+<summary>Daring Dogfight</summary>
+God Mode, Kill All, Burst Shot, ESP.
+</details>
 
+<details>
+<summary>Elemental Mages</summary>
+Instantly pick up crystals and disable camera shake.
+</details>
+
+<details>
+<summary>Crown Capture</summary>
+No Punch Interval, No Stun, Always Crown
+</details>
+
+<details>
+<summary>Explosive Exchange</summary>
+No Punch Interval, No Stun, Always Crown
+</details>
+
+<details>
+<summary>AirJump</summary>
+Allows you to jump in the air.
+</details>
+
+<details>
+<summary>Speed</summary>
+Allows you to change your speed.
+</details>
+
+<details>
+<summary>Graphical User Interface</summary>
 Toggle the GUI with Insert or RightShift.
 </details>
 

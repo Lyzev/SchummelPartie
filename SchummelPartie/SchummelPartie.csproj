@@ -47,7 +47,7 @@
             <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Pummel Party\MelonLoader\net6\MelonLoader.dll</HintPath>
         </Reference>
         <Reference Include="Newtonsoft.Json">
-          <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Pummel Party\PummelParty_Data\Managed\Newtonsoft.Json.dll</HintPath>
+            <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Pummel Party\PummelParty_Data\Managed\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
@@ -350,39 +350,41 @@
         <Compile Include="module\Module.cs"/>
         <Compile Include="module\ModuleManager.cs"/>
         <Compile Include="module\modules\ModuleAnimalArithmetic.cs"/>
-        <Compile Include="module\modules\ModuleBarnBrawl.cs" />
-        <Compile Include="module\modules\ModuleBattyBatter.cs" />
-        <Compile Include="module\modules\ModuleBomber.cs" />
-        <Compile Include="module\modules\ModuleCrownCapture.cs" />
-        <Compile Include="module\modules\ModuleDaringDogfight.cs" />
-        <Compile Include="module\modules\ModuleElementalMages.cs" />
-        <Compile Include="module\modules\ModuleExplosiveExchange.cs" />
-        <Compile Include="module\modules\ModuleFinder.cs" />
+        <Compile Include="module\modules\ModuleBarnBrawl.cs"/>
+        <Compile Include="module\modules\ModuleBattyBatter.cs"/>
+        <Compile Include="module\modules\ModuleBomber.cs"/>
+        <Compile Include="module\modules\ModuleCrownCapture.cs"/>
+        <Compile Include="module\modules\ModuleDaringDogfight.cs"/>
+        <Compile Include="module\modules\ModuleElementalMages.cs"/>
+        <Compile Include="module\modules\ModuleExplosiveExchange.cs"/>
+        <Compile Include="module\modules\ModuleFinder.cs"/>
+        <Compile Include="module\modules\ModuleAirJump.cs"/>
         <Compile Include="module\modules\ModuleGUI.cs"/>
         <Compile Include="module\modules\ModuleDebug.cs"/>
         <Compile Include="module\modules\ModuleForcePresent.cs"/>
-        <Compile Include="module\modules\ModuleMemoryMenu.cs" />
+        <Compile Include="module\modules\ModuleMemoryMenu.cs"/>
         <Compile Include="module\modules\ModuleMortarMayhem.cs"/>
         <Compile Include="module\modules\ModuleMysteryMaze.cs"/>
-        <Compile Include="module\modules\ModulePackAndPile.cs" />
-        <Compile Include="module\modules\ModulePresents.cs" />
-        <Compile Include="module\modules\ModuleRythm.cs" />
-        <Compile Include="module\modules\ModuleSpeedySpotlights.cs" />
-        <Compile Include="module\modules\ModuleSelfishStride.cs" />
-        <Compile Include="module\modules\ModuleSidestepSlope.cs" />
-        <Compile Include="module\modules\ModuleSpookySpikes.cs" />
-        <Compile Include="module\modules\ModuleSwiftShooters.cs" />
-        <Compile Include="module\modules\ModuleTanks.cs" />
-        <Compile Include="module\modules\ModuleTreasureHunt.cs" />
+        <Compile Include="module\modules\ModulePackAndPile.cs"/>
+        <Compile Include="module\modules\ModulePresents.cs"/>
+        <Compile Include="module\modules\ModuleRythm.cs"/>
+        <Compile Include="module\modules\ModuleSpeed.cs"/>
+        <Compile Include="module\modules\ModuleSpeedySpotlights.cs"/>
+        <Compile Include="module\modules\ModuleSelfishStride.cs"/>
+        <Compile Include="module\modules\ModuleSidestepSlope.cs"/>
+        <Compile Include="module\modules\ModuleSpookySpikes.cs"/>
+        <Compile Include="module\modules\ModuleSwiftShooters.cs"/>
+        <Compile Include="module\modules\ModuleTanks.cs"/>
+        <Compile Include="module\modules\ModuleTreasureHunt.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="render\Render.cs" />
-        <Compile Include="setting\ISetting.cs" />
-        <Compile Include="setting\Setting.cs" />
-        <Compile Include="setting\SettingManager.cs" />
-        <Compile Include="setting\settings\SettingDropDown.cs" />
-        <Compile Include="setting\settings\SettingSlider.cs" />
-        <Compile Include="setting\settings\SettingSwitch.cs" />
-        <Compile Include="setting\settings\SettingTextField.cs" />
+        <Compile Include="render\Render.cs"/>
+        <Compile Include="setting\ISetting.cs"/>
+        <Compile Include="setting\Setting.cs"/>
+        <Compile Include="setting\SettingManager.cs"/>
+        <Compile Include="setting\settings\SettingDropDown.cs"/>
+        <Compile Include="setting\settings\SettingSlider.cs"/>
+        <Compile Include="setting\settings\SettingSwitch.cs"/>
+        <Compile Include="setting\settings\SettingTextField.cs"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

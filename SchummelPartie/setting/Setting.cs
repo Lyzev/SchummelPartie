@@ -1,37 +1,39 @@
 ﻿using System;
 using UrGUI.UWindow;
 
-namespace SchummelPartie.setting
+namespace SchummelPartie.setting;
+
+public abstract class Setting<T> : ISetting
 {
-    public abstract class Setting<T> : ISetting
+    private T _value;
+
+    public Setting(string container, string name, T value = default, Action<T> onChange = null)
     {
-        public string Container { get; }
-        public string Name { get; }
-        public Action<T> OnChange { get; set; }
+        Container = container;
+        Name = name;
+        _value = value;
+        OnChange = onChange ?? (_ => { });
+        SettingManager.Settings.Add(this);
+    }
 
-        private T _value;
+    public Action<T> OnChange { get; set; }
+    public string Container { get; }
+    public string Name { get; }
 
-        public Setting(string container, string name, T value = default, Action<T> onChange = null)
-        {
-            Container = container;
-            Name = name;
-            _value = value;
-            OnChange = onChange ?? (_ => { });
-            SettingManager.Settings.Add(this);
-        }
+    public object GetValue()
+    {
+        return _value;
+    }
 
-        public object GetValue() => _value;
+    public void SetValue(object value)
+    {
+        _value = (T)value;
+        OnChange((T)value);
+    }
 
-        public void SetValue(object value)
-        {
-            _value = (T)value;
-            OnChange((T)value);
-        }
-
-        public virtual void OnSettings(UWindow window)
-        {
-            window.SameLine();
-            window.Label(Name);
-        }
+    public virtual void OnSettings(UWindow window)
+    {
+        window.SameLine();
+        window.Label(Name);
     }
 }

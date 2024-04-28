@@ -56,14 +56,9 @@ public static class Render
         if (w2s.z < 0f)
             return;
         if (me is { z: > 0f })
-        {
             DrawLine(new Vector2(w2s.x, Screen.height - w2s.y), new Vector2((float)me?.x, Screen.height - (float)me?.y),
                 color, thickness);
-        }
         DrawBox(w2s.x - width / 2f, Screen.height - w2s.y - height / 2f, width, height, color, thickness);
-        if (name != null)
-        {
-            DrawString(new Vector2(w2s.x, Screen.height - w2s.y - height / 2f - 20f), name);
-        }
+        if (name != null) DrawString(new Vector2(w2s.x, Screen.height - w2s.y - height / 2f - 20f), name);
     }
 }

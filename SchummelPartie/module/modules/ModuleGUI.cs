@@ -5,16 +5,16 @@ namespace SchummelPartie.module.modules;
 
 public class ModuleGUI : Module
 {
-    public static ModuleGUI Instance { get; private set; }
-
     private readonly UWindow _window;
 
     public ModuleGUI() : base("Graphical User Interface", "Toggle the GUI with Insert or RightShift.")
     {
         Instance = this;
-        _window = UWindow.Begin("Schummel Partie", startX: 0, startY: 0, startWidth: 350, startHeight: 400, dynamicHeight: true);
+        _window = UWindow.Begin("Schummel Partie", 0, 0, 350, startHeight: 400, dynamicHeight: true);
         _window.IsDrawing = false;
     }
+
+    public static ModuleGUI Instance { get; private set; }
 
     public void InitSettings()
     {

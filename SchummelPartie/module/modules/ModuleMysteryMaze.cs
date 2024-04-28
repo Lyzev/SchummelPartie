@@ -6,12 +6,12 @@ namespace SchummelPartie.module.modules;
 
 public class ModuleMysteryMaze : ModuleMinigame<MysteryMazeController>
 {
-    public static ModuleMysteryMaze Instance { get; private set; }
-
     public ModuleMysteryMaze() : base("Mystery Maze", "Shows the path to the exit.")
     {
         Instance = this;
     }
+
+    public static ModuleMysteryMaze Instance { get; private set; }
 }
 
 [HarmonyPatch(typeof(MysteryMazeController), "Update")]

@@ -8,23 +8,16 @@ public class ModuleBomber : ModuleMinigame<BomberController>
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
         if (Enabled)
-        {
             if (GameManager.Minigame is BomberController bomberController)
-            {
                 foreach (var player in bomberController.players)
-                {
                     if (player is BomberPlayer bomberPlayer)
-                    {
                         if (player.IsMe())
                         {
                             bomberPlayer.bombRange = 1000;
                             bomberPlayer.BombsRemaining = 1000;
                             bomberPlayer.MaxBombs = 1000;
                         }
-                    }
-                }
-            }
-        }
     }
 }

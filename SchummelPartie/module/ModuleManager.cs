@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MelonLoader;
@@ -38,6 +37,8 @@ public static class ModuleManager
         Modules.Add(new ModuleElementalMages());
         Modules.Add(new ModuleCrownCapture());
         Modules.Add(new ModuleExplosiveExchange());
+        Modules.Add(new ModuleAirJump());
+        Modules.Add(new ModuleSpeed());
         Modules.Add(new ModuleGUI());
         // Code to generate markdown for the modules
         // StringBuilder markdown = new StringBuilder();
@@ -67,13 +68,14 @@ public static class ModuleManager
     {
         foreach (var module in Modules)
         {
-            Type moduleType = module.GetType();
+            var moduleType = module.GetType();
             while (moduleType != null)
             {
                 if (moduleType.IsGenericType && moduleType.GetGenericTypeDefinition() == typeof(ModuleMinigame<>))
                     break;
                 moduleType = moduleType.BaseType;
             }
+
             if (moduleType != null)
                 continue;
             module.OnSettings(window);

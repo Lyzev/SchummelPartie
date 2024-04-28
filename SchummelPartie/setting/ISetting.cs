@@ -1,5 +1,4 @@
-﻿using System;
-using UrGUI.UWindow;
+﻿using UrGUI.UWindow;
 
 namespace SchummelPartie.setting;
 

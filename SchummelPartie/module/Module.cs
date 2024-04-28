@@ -9,10 +9,9 @@ namespace SchummelPartie.module;
 
 public abstract class Module
 {
-    protected readonly GUIStyle Style;
-
     public readonly string Description;
     public readonly string Name;
+    protected readonly GUIStyle Style;
     public SettingSwitch EnabledSetting;
 
     protected Module(string name, string description)
@@ -33,10 +32,7 @@ public abstract class Module
         MelonLogger.Msg($"[Module Manager] {Name} loaded.");
     }
 
-    public bool Enabled
-    {
-        get => (bool)EnabledSetting.GetValue();
-    }
+    public bool Enabled => (bool)EnabledSetting.GetValue();
 
     public void Toggle()
     {
@@ -74,14 +70,13 @@ public abstract class Module
     }
 }
 
-
 public abstract class Minigame : Module
 {
     public readonly UWindow Window;
 
     protected Minigame(string name, string description) : base(name, description)
     {
-        Window = UWindow.Begin(name, startX: 0, startY: 0, startWidth: 360, startHeight: 400, dynamicHeight: true);
+        Window = UWindow.Begin(name, 0, 0, 360, startHeight: 400, dynamicHeight: true);
         Window.Label($"<i>{Description}</i>");
         Window.Separator();
         Window.IsDrawing = false;
@@ -100,7 +95,6 @@ public abstract class Minigame : Module
 
 public abstract class ModuleMinigame<T> : Minigame
 {
-
     protected ModuleMinigame(string name, string description) : base(name, description)
     {
     }
@@ -108,12 +102,8 @@ public abstract class ModuleMinigame<T> : Minigame
     public override void OnGUI()
     {
         if (GameManager.Minigame != null && GameManager.Minigame is T)
-        {
             Window.IsDrawing = ModuleGUI.Instance.Enabled;
-        }
         else
-        {
             Window.IsDrawing = false;
-        }
     }
 }

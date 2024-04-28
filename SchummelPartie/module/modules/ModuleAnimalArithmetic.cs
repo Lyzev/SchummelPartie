@@ -3,33 +3,33 @@ using System.Reflection;
 using MelonLoader;
 using SchummelPartie.setting.settings;
 using UnityEngine;
-using UrGUI.UWindow;
 
 namespace SchummelPartie.module.modules;
 
 public class ModuleAnimalArithmetic : ModuleMinigame<CountingController>
 {
-
-    private SettingDropDown _mode;
+    private readonly SettingDropDown _mode;
 
     public ModuleAnimalArithmetic() : base("Animal Arithmetic", "Show the answer to the animal arithmetic.")
     {
-        _mode = new(Name, "Mode", new Dictionary<int, string>
+        _mode = new SettingDropDown(Name, "Mode", new Dictionary<int, string>
         {
-            {0, "Show Answer"},
-            {1, "Automatic Answer"},
-            {2, "Both"}
-        },  2);
+            { 0, "Show Answer" },
+            { 1, "Automatic Answer" },
+            { 2, "Both" }
+        }, 2);
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-        if (Enabled && (int) _mode.GetValue() != 0)
-        {
-            if (GameManager.Minigame is CountingController { curState: CountingController.CountingMinigameState.DoingRound } countingController)
+        if (Enabled && (int)_mode.GetValue() != 0)
+            if (GameManager.Minigame is CountingController
+                {
+                    curState: CountingController.CountingMinigameState.DoingRound
+                } countingController)
             {
-                CountingPlayer me =
+                var me =
                     (CountingPlayer)countingController.players.Find(player =>
                         player is CountingPlayer && player.IsMe());
                 if (me.IsMe() && me.guessCount.Value < countingController.curCorrectCount)
@@ -51,18 +51,13 @@ public class ModuleAnimalArithmetic : ModuleMinigame<CountingController>
                     }
                 }
             }
-        }
     }
 
     public override void OnGUI()
     {
         base.OnGUI();
-        if (Enabled && (int) _mode.GetValue() != 1)
-        {
+        if (Enabled && (int)_mode.GetValue() != 1)
             if (GameManager.Minigame is CountingController countingController)
-            {
                 GUI.Label(new Rect(10, 10, 100, 20), $"Answer: {countingController.curCorrectCount}", Style);
-            }
-        }
     }
 }

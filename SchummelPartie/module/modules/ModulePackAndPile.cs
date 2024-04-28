@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
@@ -8,12 +7,12 @@ namespace SchummelPartie.module.modules;
 
 public class ModulePackAndPile : ModuleMinigame<PackAndPileController>
 {
-    public static ModulePackAndPile Instance { get; private set; }
-
     public ModulePackAndPile() : base("Pack And Pile", "Automatically place boxes.")
     {
         Instance = this;
     }
+
+    public static ModulePackAndPile Instance { get; private set; }
 }
 
 [HarmonyPatch(typeof(PackAndPilePlayer), "Update")]
@@ -23,34 +22,31 @@ public static class PackAndPilePlayerPatch
     internal static bool Postfix(PackAndPilePlayer __instance)
     {
         if (ModulePackAndPile.Instance.Enabled)
-        {
-            if (GameManager.Minigame.Playable && GameManager.Minigame is PackAndPileController && __instance.IsMe() && !__instance.finished)
+            if (GameManager.Minigame.Playable && GameManager.Minigame is PackAndPileController && __instance.IsMe() &&
+                !__instance.finished)
             {
-                Type packAndPilePlayerType = __instance.GetType();
-                FieldInfo lastDropFieldInfo =
+                var packAndPilePlayerType = __instance.GetType();
+                var lastDropFieldInfo =
                     packAndPilePlayerType.GetField("lastDrop", BindingFlags.NonPublic | BindingFlags.Instance);
-                FieldInfo dropWaitTimeFieldInfo =
+                var dropWaitTimeFieldInfo =
                     packAndPilePlayerType.GetField("dropWaitTime", BindingFlags.NonPublic | BindingFlags.Instance);
-                if (Time.time - (float)lastDropFieldInfo.GetValue(__instance) >= (float)dropWaitTimeFieldInfo.GetValue(__instance))
+                if (Time.time - (float)lastDropFieldInfo.GetValue(__instance) >=
+                    (float)dropWaitTimeFieldInfo.GetValue(__instance))
                 {
-                    FieldInfo curXFieldInfo =
+                    var curXFieldInfo =
                         packAndPilePlayerType.GetField("curX", BindingFlags.NonPublic | BindingFlags.Instance);
                     if (curXFieldInfo != null)
                     {
-                        int curX = (int)curXFieldInfo.GetValue(__instance);
+                        var curX = (int)curXFieldInfo.GetValue(__instance);
                         if (curX == 3)
                         {
-                            MethodInfo placeBoxLocalMethodInfo = packAndPilePlayerType.GetMethod("PlaceBoxLocal",
+                            var placeBoxLocalMethodInfo = packAndPilePlayerType.GetMethod("PlaceBoxLocal",
                                 BindingFlags.NonPublic | BindingFlags.Instance);
                             if (placeBoxLocalMethodInfo != null)
-                            {
                                 placeBoxLocalMethodInfo.Invoke(__instance, null);
-                            }
                             else
-                            {
                                 MelonLogger.Error(
                                     $"[{ModulePackAndPile.Instance.Name}] Could not find method PlaceBoxLocal in PackAndPilePlayer.");
-                            }
                         }
                     }
                     else
@@ -60,7 +56,6 @@ public static class PackAndPilePlayerPatch
                     }
                 }
             }
-        }
 
         return true;
     }
