@@ -18,7 +18,6 @@ public class SettingSlider : Setting<float>
 
     public override void OnSettings(UWindow window)
     {
-        base.OnSettings(window);
-        window.Slider(Name, value => SetValue(value), (float)GetValue(), Min, Max);
+        window.Slider(Name, value => SetValue(value), (float)GetValue(), Min, Max, true, "0");
     }
 }

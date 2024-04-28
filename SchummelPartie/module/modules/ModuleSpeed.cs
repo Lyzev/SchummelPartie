@@ -10,7 +10,7 @@ public class ModuleSpeed : Module
 
     public ModuleSpeed() : base("Speed", "Allows you to change your speed.")
     {
-        MaxSpeed = new SettingSlider(Name, "Max Speed", 5, 15, 15);
+        MaxSpeed = new SettingSlider(Name, "Max Speed", 5, 30, 15);
     }
 
     public override void OnUpdate()
