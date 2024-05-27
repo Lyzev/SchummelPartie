@@ -356,6 +356,7 @@
         <Compile Include="module\modules\ModuleCrownCapture.cs"/>
         <Compile Include="module\modules\ModuleDaringDogfight.cs"/>
         <Compile Include="module\modules\ModuleElementalMages.cs"/>
+        <Compile Include="module\modules\ModuleESP.cs" />
         <Compile Include="module\modules\ModuleExplosiveExchange.cs"/>
         <Compile Include="module\modules\ModuleFinder.cs"/>
         <Compile Include="module\modules\ModuleAirJump.cs"/>
@@ -369,7 +370,6 @@
         <Compile Include="module\modules\ModulePresents.cs"/>
         <Compile Include="module\modules\ModuleRythm.cs"/>
         <Compile Include="module\modules\ModuleSpeed.cs"/>
-        <Compile Include="module\modules\ModuleSpeedySpotlights.cs"/>
         <Compile Include="module\modules\ModuleSelfishStride.cs"/>
         <Compile Include="module\modules\ModuleSidestepSlope.cs"/>
         <Compile Include="module\modules\ModuleSpookySpikes.cs"/>

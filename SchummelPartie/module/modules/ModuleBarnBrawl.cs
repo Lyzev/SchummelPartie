@@ -11,7 +11,6 @@ namespace SchummelPartie.module.modules;
 public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
 {
     public SettingSwitch BurstShotgun;
-    public SettingSwitch ESP;
     public SettingSwitch GodMode;
     public SettingSwitch InfiniteShotgun;
     public SettingSwitch NoCameraShake;
@@ -22,7 +21,6 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
         InfiniteShotgun = new SettingSwitch(Name, "Infinite Shotgun");
         BurstShotgun = new SettingSwitch(Name, "Burst Shotgun");
         NoCameraShake = new SettingSwitch(Name, "No Camera Shake");
-        ESP = new SettingSwitch(Name, "Extra Sensory Perception");
     }
 
     public override void OnUpdate()
@@ -68,36 +66,5 @@ public class ModuleBarnBrawl : ModuleMinigame<BarnBrawlController>
                                 }
                             }
                         }
-    }
-
-    public override void OnGUI()
-    {
-        base.OnGUI();
-        if (Enabled && (bool)ESP.GetValue())
-            try
-            {
-                if (GameManager.Minigame is BarnBrawlController barnBrawlController && GameManager.Minigame.Playable)
-                {
-                    var me = barnBrawlController.players.First(player => player.IsMe());
-                    if (Camera.current != null)
-                    {
-                        var mePos = Camera.current.WorldToScreenPoint(me.transform.position);
-                        if (barnBrawlController.players is { Count: > 0 })
-                            foreach (var player in barnBrawlController.players)
-                                if (player is BarnBrawlPlayer)
-                                    if (!player.IsDead && (!player.IsOwner || player.GamePlayer.IsAI))
-                                    {
-                                        var playerPos =
-                                            Camera.current.WorldToScreenPoint(player.transform.position);
-                                        Render.DrawESP(playerPos, 50f, 100f, Color.red, me: mePos,
-                                            name: $"[{player.GamePlayer.Name}]");
-                                    }
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                MelonLogger.Error(e.ToString());
-            }
     }
 }

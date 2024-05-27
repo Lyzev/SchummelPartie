@@ -32,13 +32,13 @@ public static class ModuleManager
         Modules.Add(new ModuleMemoryMenu());
         Modules.Add(new ModuleTanks());
         Modules.Add(new ModuleSidestepSlope());
-        Modules.Add(new ModuleSpeedySpotlights());
         Modules.Add(new ModuleDaringDogfight());
         Modules.Add(new ModuleElementalMages());
         Modules.Add(new ModuleCrownCapture());
         Modules.Add(new ModuleExplosiveExchange());
         Modules.Add(new ModuleAirJump());
         Modules.Add(new ModuleSpeed());
+        Modules.Add(new ModuleESP());
         Modules.Add(new ModuleGUI());
         // Code to generate markdown for the modules
         // StringBuilder markdown = new StringBuilder();

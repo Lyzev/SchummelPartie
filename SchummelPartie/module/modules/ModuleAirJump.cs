@@ -19,10 +19,9 @@ public class ModuleAirJump : Module
         if (Enabled)
             if (GameManager.Minigame != null && GameManager.Minigame.Playable && GameManager.Minigame.players != null &&
                 GameManager.Minigame.players.Count > 0 &&
-                GameManager.Minigame.players.FirstOrDefault(p => p.IsMe()) is Movement movement)
+                GameManager.Minigame.players.FirstOrDefault(p => p.IsMe()) is { } me)
             {
-                var characterMover = (CharacterMover)typeof(Movement)
-                    .GetField("m_characterMover", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(movement);
+                var characterMover = me.GetComponent<CharacterMover>();
                 if (characterMover != null) characterMover.maxJumps = (int)(float)MaxJumps.GetValue();
             }
     }

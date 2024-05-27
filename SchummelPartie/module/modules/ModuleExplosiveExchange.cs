@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using SchummelPartie.setting.settings;
+using UnityEngine;
 
 namespace SchummelPartie.module.modules;
 
 public class ModuleExplosiveExchange : ModuleMinigame<PassTheBombController>
 {
-    public SettingSwitch NoBomb;
 
+    public SettingSwitch NoBomb;
     public SettingSwitch NoStun;
 
     public ModuleExplosiveExchange() : base("Explosive Exchange", "No Punch Interval, No Stun, Always Crown")
@@ -25,12 +26,9 @@ public class ModuleExplosiveExchange : ModuleMinigame<PassTheBombController>
                         if (player.IsMe())
                         {
                             if ((bool)NoStun.GetValue()) passTheBombPlayer.Stunned = false;
-                            if ((bool)NoBomb.GetValue())
+                            if ((bool)NoBomb.GetValue() && passTheBombPlayer.HoldingBomb)
                             {
-                                var enemy = (PassTheBombPlayer)passTheBombController.players.FirstOrDefault(p =>
-                                    !p.IsMe() && !p.IsDead);
-                                if (enemy != null) enemy.HoldingBomb = true;
-                                passTheBombPlayer.HoldingBomb = false;
+                                passTheBombPlayer.PunchRPC(null, Random.value > 0.5);
                             }
                         }
     }

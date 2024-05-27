@@ -2,6 +2,7 @@
 using System.Reflection;
 using MelonLoader;
 using SchummelPartie.setting.settings;
+using UnityEngine;
 
 namespace SchummelPartie.module.modules;
 
@@ -12,7 +13,7 @@ public class ModuleElementalMages : ModuleMinigame<ElementalMagesController>
 
     public ModuleElementalMages() : base("Elemental Mages", "Instantly pick up crystals and disable camera shake.")
     {
-        InstantPickupCrystal = new SettingSwitch(Name, "Instant Pickup Crystal");
+        InstantPickupCrystal = new SettingSwitch(Name, "Instant Pickup Crystal (Host Only)");
         NoCameraShake = new SettingSwitch(Name, "No Camera Shake");
     }
 
@@ -29,8 +30,7 @@ public class ModuleElementalMages : ModuleMinigame<ElementalMagesController>
                                 try
                                 {
                                     foreach (var crystal in elementalMagesController.crystals)
-                                        elementalMagesController.RPCDespawnCrystal(null, crystal.id,
-                                            (byte)player.OwnerSlot);
+                                        elementalMagesController.RPCDespawnCrystal(null, crystal.id, (byte)player.OwnerSlot);
                                 }
                                 catch (Exception)
                                 {

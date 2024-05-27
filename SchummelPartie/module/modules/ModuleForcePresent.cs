@@ -11,7 +11,7 @@ public class ModuleForcePresent : Module
 {
     public SettingDropDown ActionID;
 
-    public ModuleForcePresent() : base("Force Present", "Forces the present action. (NOT TESTED)")
+    public ModuleForcePresent() : base("Force Present", "Forces the present action.")
     {
         Instance = this;
         ActionID = new SettingDropDown(Name, "Action ID", new Dictionary<int, string>
