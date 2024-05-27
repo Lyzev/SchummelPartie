@@ -31,7 +31,26 @@ by the use of this software. This project is intended for educational purposes o
 <details>
 <summary>Debug</summary>
 Toggle the Debug mode.
-<img src="debug.png" alt="Debug Mode Features">
+
+| Key                  | Description                                              | Host Required |
+|----------------------|----------------------------------------------------------|---------------|
+| T                    | Increase trophies in "Unlocks" menu.                     | No            |
+| C                    | Increase crowns in "Unlocks" menu.                       | No            |
+| R + Period (Ex: .)   | Reset unlocks in "Unlocks" menu.                         | No            |
+| Shift + Left Click   | Spawn keys at the location of your mouse cursor.         | Yes           |
+| Number               | Rolls your dice to the number you pressed.               | No            |
+| Ctrl + Click         | Teleport to the location you clicked on.                 | Yes           |
+| -                    | Collect 5 keys and 1 random item for the current player. | Yes           |
+| Left/Right Shift + E | Force stops the current minigame.                        | Yes           |
+| F11                  | Free Cam/No Clip (Use Shift and WASD)                    | No            |
+| Numpad -             | Slow down animations                                     | Yes           |
+| Numpad +             | Speeds up animations                                     | Yes           |
+| P                    | Give 1 Key to everyone                                   | Yes           |
+| Ο                    | Remove 1 Key from everyone                               | Yes           |
+| Backtick (Ex: `)     | Open the console                                         | No            |
+| F9                   | Forces 15 FPS                                            | Yes           |
+| Up Arrow             | Show/Hide the arrows on the gameboard                    | No            |
+| Left Shift + F10/F11 | Test connection to the game                              | Yes           |
 </details>
 
 <details>
