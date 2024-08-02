@@ -26,6 +26,27 @@ This project is not affiliated with or endorsed by Pummel Party, Rebuilt Games, 
 this software is at your own risk. The developers of this project are not responsible for any damages or losses caused 
 by the use of this software. This project is intended for educational purposes only.
 
+## Getting Started
+
+### Prerequisites
+
+- [Pummel Party](https://store.steampowered.com/app/880940/Pummel_Party/) (Steam version)
+- [MelonLoader](https://melonwiki.xyz/#/README) (latest version)
+- [UrGUI](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started) (latest version)
+
+### Installation
+
+1. Download the latest release of SchummelPartie from the [releases page](https://github.com/Lyzev/SchummelPartie/releases).
+2. Put the downloaded `SchummelPartie.dll` file into the `Mods` folder of your Pummel Party installation.
+3. Run the game and enjoy the mod!
+
+### Need help?
+
+For assistance with minor concerns, feel free to join our supportive community on
+the [Discord server](https://lyzev.dev/discord). Our friendly members and staff are ready to help you.
+
+**Tip:** Check out the FAQ on our [Discord server](https://lyzev.dev/discord). Your question has probably already been answered there.
+
 ## Modules
 
 <details>
@@ -183,25 +204,11 @@ Allows you to change your speed.
 Toggle the GUI with Insert or RightShift.
 </details>
 
-## Getting Started
-
-### Prerequisites
-
-- [Pummel Party](https://store.steampowered.com/app/880940/Pummel_Party/) (Steam version)
-- [MelonLoader](https://melonwiki.xyz/#/README) (latest version)
-- [UrGUI](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started) (latest version)
-
-### Installation
-
-1. Download the latest release of SchummelPartie from the [releases page](https://github.com/Lyzev/SchummelPartie/releases).
-2. Put the downloaded `SchummelPartie.dll` file into the `Mods` folder of your Pummel Party installation.
-3. Run the game and enjoy the mod!
-
-### Contributing
+## Contributing
 
 Thank you for considering contributing to this Pummel Party hacked client! Your contributions will help to make it even better.
 
-#### How to set up the development environment
+### How to set up the development environment
 
 1. Clone the repository.
 2. Open the solution in your preferred IDE (e.g.: Rider, Visual Studio).
