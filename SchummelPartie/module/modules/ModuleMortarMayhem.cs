@@ -18,7 +18,7 @@ public class ModuleMortarMayhem : ModuleMinigame<MortarMayhemController>
                     mortarMayhemState: MortarMayhemController.MortarMayhemState
                         .DoingPattern
                 } mortarMayhemController)
-                for (var i = 0; i < GameManager.GetPlayerCount(); i++)
+                for (var i = 0; i < GameManager.PlayerCount; i++)
                 {
                     var player = mortarMayhemController.GetPlayer(i) as MortarMayhemPlayer;
                     if (player != null && !player.IsDead)

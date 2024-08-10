@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using SchummelPartie;
 
-[assembly: MelonInfo(typeof(Loader), "Schummel Partie", "1.0.3", "Lyzev")]
+[assembly: MelonInfo(typeof(Loader), "Schummel Partie", "1.0.4", "Lyzev")]
 [assembly: MelonGame("Rebuilt Games", "Pummel Party")]
 
 // General Information about an assembly is controlled through the following 
