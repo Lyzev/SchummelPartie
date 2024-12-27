@@ -23,7 +23,7 @@ public static class BattyBatterPlayerPatch
     {
         try
         {
-            if (GameManager.Minigame.Playable && __instance.IsMe() && __instance.canHit)
+            if (ModuleBattyBatter.Instance.Enabled && GameManager.Minigame.Playable && __instance.IsMe() && __instance.canHit)
                 if (((BattyBatterController)GameManager.Minigame).currentBalls[__instance.OwnerSlot].transform.position
                     .y <= ((BattyBatterController)GameManager.Minigame).ballHitPoints[__instance.OwnerSlot].y + .05f)
                 {
