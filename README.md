@@ -22,30 +22,62 @@
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by Pummel Party, Rebuilt Games, or any of their affiliates. The use of 
-this software is at your own risk. The developers of this project are not responsible for any damages or losses caused 
-by the use of this software. This project is intended for educational purposes only.
+This project is an independent and unofficial modification designed to enhance the gameplay experience of Pummel Party in a fun and educational way. The terms "hack" or "cheat" may be used as common synonyms for modding within the community, but they do not imply or involve any form of actual hacking or cheating. This project is not affiliated with, endorsed by, or authorized by Pummel Party, Rebuilt Games, or any of their affiliates.
+
+Users are solely responsible for ensuring compliance with all applicable game policies and terms of service before using this software. The developers of this project disclaim all liability for any direct, indirect, incidental, or consequential damages arising from the use or misuse of this software. By using this software, you agree to do so at your own risk.
+
+This project respects the intellectual property rights of Pummel Party and Rebuilt Games, and no claims of ownership over their intellectual property are made.
 
 ## Getting Started
 
+This guide will help you set up everything you need to start using **SchummelPartie** with Pummel Party.
+
 ### Prerequisites
 
-- [Pummel Party](https://store.steampowered.com/app/880940/Pummel_Party/) (Steam version)
-- [MelonLoader](https://melonwiki.xyz/#/README) (latest version)
-- [UrGUI](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started) (latest version)
+Before you begin, ensure you have the following:
+
+1. **[Pummel Party](https://store.steampowered.com/app/880940/Pummel_Party/)** (Steam version): The base game required for the mod.  
+2. **[MelonLoader](https://melonwiki.xyz/#/README)** (latest version): A universal mod loader for Unity games.  
+   - See the manual here: [https://melonwiki.xyz/#/README](https://melonwiki.xyz/#/README)
+3. **[UrGUI](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started)** (latest version): A required library for SchummelPartie to function.
+   - See the manual here: [https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started)
 
 ### Installation
 
-1. Download the latest release of SchummelPartie from the [releases page](https://github.com/Lyzev/SchummelPartie/releases).
-2. Put the downloaded `SchummelPartie.dll` file into the `Mods` folder of your Pummel Party installation.
-3. Run the game and enjoy the mod!
+Follow these steps to install SchummelPartie:
 
-### Need help?
+1. **Download SchummelPartie**  
+   Go to the [releases page](https://github.com/Lyzev/SchummelPartie/releases) and download the latest version of the mod.
 
-For assistance with minor concerns, feel free to join our supportive community on
-the [Discord server](https://lyzev.dev/discord). Our friendly members and staff are ready to help you.
+2. **Install MelonLoader**  
+   If you haven't already installed MelonLoader, follow the steps in the tutorial linked above.
 
-**Tip:** Check out the FAQ on our [Discord server](https://lyzev.dev/discord). Your question has probably already been answered there.
+3. **Set Up UrGUI**  
+   - Download the latest version of UrGUI from its [GitHub repository](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started).  
+   - Place the necessary UrGUI files into your Pummel Party installation directory `UserLibs` as described in the UrGUI setup instructions.
+
+4. **Install SchummelPartie**  
+   - Locate the `Mods` folder in your Pummel Party installation directory.  
+     *(If this folder doesn’t exist, MelonLoader will create it the first time you run the game.)*  
+   - Place the downloaded `SchummelPartie.dll` file into the `Mods` folder.  
+
+5. **Launch the Game**  
+   Start Pummel Party through Steam. If everything is installed correctly, SchummelPartie will load automatically.
+
+### Toggling the GUI
+
+Once the game is running, you can toggle the mod’s graphical user interface (GUI) using the following keys (both work):
+
+- Right Shift (R SHIFT)
+- Insert
+
+Use these keys to access and control the mod features easily.
+
+### Notes and Troubleshooting
+
+- Ensure your versions of MelonLoader and UrGUI are up to date for compatibility.  
+- If the game doesn’t start or the mod doesn’t load, double-check the file paths and installation steps.  
+- For further assistance, visit the [SchummelPartie GitHub page](https://github.com/Lyzev/SchummelPartie) or join the project’s support community.
 
 ## Modules
 
