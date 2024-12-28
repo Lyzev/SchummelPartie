@@ -4,7 +4,7 @@
 
 <h1 align="center">SchummelPartie</h1>
 
-<p align="center">Power up your Pummel Party experience with this customizable cheat, built for friendly competition or solo practice.</p>
+<p align="center">Power up your Pummel Party experience with this customizable mod, built for friendly competition or solo practice.</p>
 
 <div align="center">
     <a href="https://lyzev.github.io/discord"><img src="https://img.shields.io/discord/610120595765723137?logo=discord" alt="Discord"/></a>
@@ -22,7 +22,7 @@
 
 ## Disclaimer
 
-This project is an independent and unofficial modification designed to enhance the gameplay experience of Pummel Party in a fun and educational way. The terms "hack" or "cheat" may be used as common synonyms for modding within the community, but they do not imply or involve any form of actual hacking or cheating. This project is not affiliated with, endorsed by, or authorized by Pummel Party, Rebuilt Games, or any of their affiliates.
+This project is an independent and unofficial modification designed to enhance the gameplay experience of Pummel Party in a fun and is for educational purposes only. The terms "hack" or "cheat" may be used as common synonyms for modding within the community, but they do not imply or involve any form of actual hacking or cheating. This project is not affiliated with, endorsed by, or authorized by Pummel Party, Rebuilt Games, or any of their affiliates.
 
 Users are solely responsible for ensuring compliance with all applicable game policies and terms of service before using this software. The developers of this project disclaim all liability for any direct, indirect, incidental, or consequential damages arising from the use or misuse of this software. By using this software, you agree to do so at your own risk.
 
