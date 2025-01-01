@@ -39,7 +39,7 @@ Before you begin, ensure you have the following:
 1. **[Pummel Party](https://store.steampowered.com/app/880940/Pummel_Party/)** (Steam version): The base game required for the mod.  
 2. **[MelonLoader](https://melonwiki.xyz/#/README)** (latest version): A universal mod loader for Unity games.  
    - See the manual here: [https://melonwiki.xyz/#/README](https://melonwiki.xyz/#/README)
-   - It is recommended to use the [Automated Installation](https://melonwiki.xyz/#/README?id=automated-installation)
+   - It is recommended to use the [Automated Installation](https://melonwiki.xyz/#/README?id=automated-installation). (Download the installer and pick the game directory)
 3. **[UrGUI](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started)** (latest version): A required library for SchummelPartie to function.
    - See the manual here: [https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started)
 
