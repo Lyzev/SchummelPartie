@@ -1,4 +1,4 @@
-# Contributing to Schizoid
+# Contributing to Schummel Partie
 
 Thank you for considering contributing to this Pummel Party hacked client! Your contributions will help to make
 it even better.
