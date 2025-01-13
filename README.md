@@ -55,7 +55,7 @@ Follow these steps to install SchummelPartie:
 
 3. **Set Up UrGUI**  
    - Download the latest version of UrGUI from its [GitHub repository](https://github.com/Lyzev/UrGUI/tree/main?tab=readme-ov-file#getting-started).  
-   - Place the necessary UrGUI files into your Pummel Party installation directory `UserLibs` as described in the UrGUI setup instructions.
+   - Place the necessary UrGUI files into your Pummel Party installation directory `UserLibs` (create if MelonLoader did not) as described in the UrGUI setup instructions.
 
 4. **Install SchummelPartie**  
    - Locate the `Mods` folder in your Pummel Party installation directory.  
