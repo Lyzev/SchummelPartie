@@ -32,6 +32,11 @@ This project respects the intellectual property rights of Pummel Party and Rebui
 
 This guide will help you set up everything you need to start using **SchummelPartie** with Pummel Party.
 
+### Video Tutorial
+
+[![Video Tutorial](https://img.youtube.com/vi/c4c-QC_M2gk/0.jpg)](https://www.youtube.com/watch?v=c4c-QC_M2gk)  
+By Zebbson
+
 ### Prerequisites
 
 Before you begin, ensure you have the following:
